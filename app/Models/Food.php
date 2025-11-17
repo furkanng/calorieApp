@@ -16,7 +16,8 @@ class Food extends Model
     protected $fillable = [
         'country_id','language','name',
         'calories','protein','fat','carbs',
-        'sugar','fiber','sodium','vitamins_json','image_url'
+        'sugar','fiber','sodium','vitamins_json','image_url',
+        'gluten','dairy','nuts'
     ];
 
     protected $casts = [

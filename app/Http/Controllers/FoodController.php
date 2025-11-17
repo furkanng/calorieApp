@@ -56,6 +56,9 @@ class FoodController extends Controller
                 'sugar' => $request->get("sugar"),
                 'fiber' => $request->get("fiber"),
                 'sodium' => $request->get("sodium"),
+                'gluten' => $request->get("gluten"),
+                'dairy' => $request->get("dairy"),
+                'nuts' => $request->get("nuts"),
                 'vitamins_json' => json_encode($request->get("vitamins_json")),
             ]);
 
