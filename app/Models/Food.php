@@ -28,4 +28,17 @@ class Food extends Model
     {
         return $this->belongsTo(Country::class);
     }
+
+    // Aynı ülkeye ait diğer dil versiyonlarını getir (eski - kullanılmıyor)
+    public function translations()
+    {
+        return $this->hasMany(Food::class, 'country_id', 'country_id')
+            ->where('id', '!=', $this->id);
+    }
+
+    // Çevirileri getir
+    public function nameTranslations()
+    {
+        return $this->hasMany(FoodTranslation::class);
+    }
 }
